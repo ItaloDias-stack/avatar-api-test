@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 
 import 'package:dio/dio.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 import 'app_global_context.dart';
 import 'custom_colors.dart';
@@ -46,4 +47,12 @@ final snackBar = SnackBar(
 
 showUnauthSnackBar() {
   ScaffoldMessenger.of(GlobalAppContext.globalContext).showSnackBar(snackBar);
+}
+
+Future<bool> askCameraPermission() async {
+  var status = await Permission.camera.request().isGranted;
+  if (status) {
+    status = await Permission.camera.request().isGranted;
+  }
+  return status;
 }

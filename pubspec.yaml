@@ -39,7 +39,7 @@ dependencies:
   camera: 0.10.5+5
   path_provider: 2.1.1
   scaled_app: 2.2.0
-
+  #flutter_3d_controller: 1.2.1
   ##firebase
   firebase_messaging: 14.7.2
 
@@ -88,6 +88,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/3d/
     - assets/vectors/
     - .env.staging
     - .env.production
