@@ -72,6 +72,7 @@ class CustomInterceptors extends InterceptorsWrapper {
     final auth = await Authentication.authenticated();
     if (auth) {
       final token = await Authentication.getToken();
+      options.headers["X-APP-ID"] = "65ccd07a656645cd295a2771";
       options.headers["Authorization"] = "Bearer $token";
     }
     options.headers["Accept"] = "application/json";

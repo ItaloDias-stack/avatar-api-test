@@ -56,3 +56,26 @@ Future<bool> askCameraPermission() async {
   }
   return status;
 }
+
+String getAssetKeyByName(String name) {
+  switch (name) {
+    case "lipshape":
+      return "lipShape";
+    case "glasses":
+      return 'glasses';
+    case "headwear":
+      return "headwear";
+    case "noseshape":
+      return "noseShape";
+    case "facemask":
+      return "faceMask";
+    case "facewear":
+      return "facewear";
+    case "eye":
+      return "${name}Color";
+    case "eyebrows":
+      return "eyebrowStyle";
+    default:
+      return "${name}Style";
+  }
+}
